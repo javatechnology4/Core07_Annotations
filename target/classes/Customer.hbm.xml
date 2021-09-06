@@ -1,0 +1,27 @@
+<?xml version = "1.0" encoding = "utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+"-//Hibernate/Hibernate Mapping DTD//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping schema="hb"
+	package="com.spring.mvc.model">
+	<class name="Customer" table="Customer">
+
+		<meta attribute="class-description">
+			This class contains the Employee detail.
+		</meta>
+
+		<id name="id" type="long" column="CUSTOMER_ID">
+			<generator class="native" /> <!-- Identity, Sequence, hilo increment -->
+		</id>
+
+		<property name="name" column="CUSTOMER_NAME" type="string"
+			not-null="true" />
+		<property name="email" column="CUSTOMER_EMAIL" type="string"
+			not-null="true" />
+		<property name="address" column="CUSTOMER_ADDRESS" type="string"
+			not-null="true" />
+		
+
+	</class>
+</hibernate-mapping>
